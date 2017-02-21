@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :tanks, only: [:show] do
     resources :fish
   end
+
+  resources :breeds, only: [:new, :create, :show]
 end
