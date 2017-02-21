@@ -1,0 +1,17 @@
+<h1>Create New Tank</h1>
+
+<%= form_for [@user, @tank] do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<br>
+<%= f.label :dimensions %>
+<%= f.text_field :dimensions %>
+<br>
+<br>
+<%= f.label :gallons %>
+<%= f.text_field :gallons %>
+<br>
+<br>
+<%= f.submit "Create Tank" %>
+<% end %>

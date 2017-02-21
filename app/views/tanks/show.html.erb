@@ -1,0 +1,12 @@
+<%= button_to "Back to Your Profile", user_path(@tank.user_id), method: :get %>
+<h1>Tank: <%= @tank.name %></h1>
+
+<p>Size: <%= @tank.gallons %> Gallons</p>
+<br><br>
+  <% @tank.fish.each do |fish| %>
+    <%= fish.name %> <br>
+    <%= fish.breed %> <br>
+    <%= fish.purchase_store %> <br>
+    <%= fish.purchase_date %> <br>
+    <br><br>
+  <% end %>
