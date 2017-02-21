@@ -3,15 +3,13 @@
           <div class="card blue">
             <div class="card-content white-text">
               <span class="card-title"><h1>Welcome <%= current_user.first_name %> <%= current_user.last_name %></h1></span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Manage you tanks.</p>
             </div>
           </div>
         </div>
       </div>
 
-  <h2>Tanks</h2>
-  <%= link_to "Add Tank", new_user_tank_path(current_user) %>
+  <%= button_to "Add Tank", new_user_tank_path(current_user), class: "btn deep-purple darken-1", method: :get %>
 
   <% if current_user.tanks.empty?  %>
 
