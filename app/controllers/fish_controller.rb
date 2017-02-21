@@ -17,6 +17,6 @@ class FishController < ApplicationController
   private
 
   def fish_params
-    params.require(:fish).permit(:name, :breed, :temperament, :purchase_store, :purchase_date).merge(tank_id: params[:tank_id])
+    params.require(:fish).permit(:name, :breed_id, :cost, :temperament, :purchase_store, :purchase_date).merge(tank_id: params[:tank_id])
   end
 end

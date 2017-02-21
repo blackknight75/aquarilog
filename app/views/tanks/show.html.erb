@@ -3,10 +3,9 @@
 
 <p>Size: <%= @tank.gallons %> Gallons</p>
 <br><br>
+
   <% @tank.fish.each do |fish| %>
     <%= fish.name %> <br>
-    <%= fish.breed %> <br>
-    <%= fish.purchase_store %> <br>
-    <%= fish.purchase_date %> <br>
+    <%= fish.breed.name %> <br>
     <br><br>
   <% end %>
