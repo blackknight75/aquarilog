@@ -4,10 +4,24 @@
 <p>Size: <%= @tank.gallons %> Gallons</p>
 <br><br>
 
+<div class="row">
   <% @tank.fish.each do |fish| %>
-    <%= image_tag(fish.fish_image, size: "150") %>
-    <h4><%= fish.name %></h4>
-    <p><%= fish.breed.name %></p> <br>
-    <%= button_to "Edit Fish", edit_tank_fish_path(@tank, fish), method: :get %>
-    <br><br>
+    <div class="col s6 m6">
+       <div class="card horizontal green accent-1">
+         <div class="card-image">
+           <%= image_tag(fish.fish_image, height: '100', width: '32') %>
+         </div>
+         <div class="card-stacked">
+           <div class="card-content">
+             <h2 class="header"></h2>
+             <h3><%= fish.name %></h3>
+             <p><%= fish.breed.name %></p>
+           </div>
+           <div class="card-action">
+             <%= link_to "Edit Fish", edit_tank_fish_path(@tank, fish) %>
+           </div>
+         </div>
+       </div>
+     </div>
   <% end %>
+</div>
