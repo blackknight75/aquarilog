@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :tanks, only: [:show] do
-    resources :fish
+    resources :fish, except: [:destroy]
   end
 
   resources :breeds, only: [:new, :create, :show]
