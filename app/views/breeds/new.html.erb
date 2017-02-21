@@ -1,0 +1,9 @@
+<h1>Create Breed</h1>
+
+<%= form_for @breed do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :temperament %>
+<%= f.text_field :temperament %>
+<%= f.submit "Create Breed" %>
+<% end %>
